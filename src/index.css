@@ -1,13 +1,137 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600&family=Signika+Negative&display=swap');
+
+
+
+*{
+  font-family: 'Outfit', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.about{
+  font-family: 'Signika Negative', sans-serif;
+}
+
+.btn{
+  font-size: 2.4rem;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  background-color: #8e24aa;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10rem;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+
+
+
+ 
+body{
+  background: antiquewhite;
+}
+
+.hamb{
+  display: none;
+}
+
+.typed-cursor{
+  color:  #7e22ce;
+}
+
+.nav{
+  background: black;
+  color: darkgrey ;
+}
+
+.first > div{
+  width: 30%;
+}
+
+.stick{
+  position: sticky;
+  top: 0;
+}
+
+.active{
+  color: white;
+}
+
+svg{
+  cursor: pointer;
+}
+.nav-menu{
+  display: flex;
+}
+
+@media screen and (max-width: 1040px) {
+  .btn{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .nav-menu{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+  position: relative;
+  left: -100%;
+  transition: 0.3s;
+   
+
+  }
+
+  .first > div{
+  width: 70%;
+}
+
+  .left{
+   
+  }
+
+  .right{
+    width: 100px;
+  }
+
+  section{
+    flex-direction: column-reverse;
+  }
+
+
+
+  .nav-menu.active{
+    left: 0;
+    
+  } 
+  .nav-menu li{
+    padding: 1rem 0; 
+  }
+  .nav-menu li a{
+    font-size: 2rem;
+  }
+
+ .hamb{
+  position: absolute;
+  top: 0;
+  padding: 30px;
+  right: 0;
+  display: initial;
+}
+  
 }
